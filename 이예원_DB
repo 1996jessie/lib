@@ -1,0 +1,236 @@
+--도서
+drop sequence bookseq;
+create sequence bookseq
+  increment by 1
+  start with 1001
+  minvalue 1000
+  maxvalue 9999
+  nocache;
+
+drop table book;
+create table book(
+    bnum number not null primary key,
+    btitle varchar2(100) not null,
+    bauthor varchar2(50) not null,
+    bcategory varchar2(5),
+    scategory varchar2(5),
+    bpublisher varchar2(30),
+    bcode varchar2(30),
+    bimage varchar2(100),
+    bpubyear number,
+    bbuydate date,
+    bprice number,
+    blendcount number default 0,
+    breservecount number default 0
+);
+
+insert into book values
+(bookseq.nextval, '해리포터 : 마법사의 돌', '조앤 K. 롤링', '800', '40', '문학수첩', '840-조1001해', '해리포터마법사의돌.jpg', '2014', '2014-01-01', 15000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '한국 서지학', '천혜봉', '000', '10', '민음사', '010-천1002한', '한국서지학.jpg', '2006', '2006-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '문헌정보학개론', '노문자', '000', '20', '태일사', '020-노1003문', '문헌정보학개론.jpg', '2006', '2006-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '사전 보는 법', '정철', '000', '30', '유유', '030-정1004사', '사전보는법.jpg', '2020', '2020-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '뉴스의 발견 : 미국 신문의 사회사', '마이클 셔드슨', '000', '70', '커뮤니케이션북스', '070-마1005뉴', '뉴스의발견미국신문의사회사.jpg', '2019', '2019-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '형이상학과 과학 밖 소설', '퀑탱 메이야수', '100', '10', '이학사', '110-퀑1006형', '형이상학과과학밖소설.jpg', '2017', '2017-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '하룻밤에 읽는 동양 철학', '양승권', '100', '50', '페이퍼로드', '150-양1007하', '하룻밤에읽는동양철학.jpg', '2022', '2022-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '플라톤 국가 강의', '이종환', '100', '60', '김영사', '160-이1008플', '플라톤국가강의.jpg', '2019', '2019-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '논리와 오류', '유순근', '100', '70', '박영사', '170-유1009논', '논리와오류.jpg', '2018', '2018-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '생각 중독', '닉 트렌턴', '100', '80', '갤리온', '180-닉1010생', '생각중독.jpg', '2024', '2024-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '누구를 구할 것인가?', '토머스 캐스카트', '100', '90', '문학동네', '190-토1011누', '누구를구할것인가.jpg', '2014', '2014-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '완벽하지 않은 것들에 대한 사랑', '혜민', '200', '20', '수오서재', '220-혜1012완', '완벽하지않은것들에대한사랑.jpg', '2016', '2016-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '스님, 어떤 게 잘 사는 겁니까', '명진', '200', '20', '다산초당', '220-명1013스', '스님어떤게잘사는겁니까.jpg', '2018', '2018-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '왜 예수인가?', '조정민', '200', '30', '두란노', '230-조1014왜', '왜예수인가.jpg', '2014', '2014-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '본회퍼의 삶과 신학', '마크 디바인', '200', '30', '한스컨텐츠', '230-마1015본', '본회퍼의삶과신학.jpg', '2007', '2007-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '힌두이즘 이해하기', '스와미 바스카라난다', '200', '70', '한국학술정보', '270-스1016힌', '힌두이즘이해하기.jpg', '2016', '2016-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '히잡을 처음 쓰는 날', '이브티하즈 무하마드', '200', '80', '보물창고', '280-이1017히', '히잡을처음쓰는날.jpg', '2020', '2020-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '통계가 전하는 거짓말', '정남구', '300', '10', '시대의창', '310-정1018통', '통계가전하는거짓말.jpg', '2008', '2008-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '통계학, 빅데이터를 잡다', '조재근', '300', '10', '한국문학사', '310-조1019통', '통계학빅데이터를잡다.jpg', '2017', '2017-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '부자 미국 가난한 유럽', '손진석', '300', '20', '플랜비디자인', '320-손1020부', '부자미국가난한유럽.jpg', '2023', '2023-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '화폐 권력과 민주주의', '최배근', '300', '20', '월요일의꿈', '320-최1021화', '화폐권력과민주주의.jpg', '2024', '2024-01-01', 13000, 50, 0);
+
+insert into book values
+(bookseq.nextval, '기업의 세계사', '윌리엄 매그너슨', '300', '20', '한빛비즈', '320-윌1022기', '기업의세계사.jpg', '2024', '2024-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '가난은 어떻게 죄가 되는가', '맷 타이비', '300', '30', '열린책들', '330-맷1023가', '가난은어떻게죄가되는가.jpg', '2015', '2015-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '정의는 불온하다 : 정의, 성장에서 분배로', '김비환', '300', '30', '개마고원', '330-김1024정', '정의는불온하다.jpg', '2016', '2016-01-01', 13000, 17, 0);
+
+insert into book values
+(bookseq.nextval, '미국은 왜 아웃사이더 트럼프를 선택했는가', '빅터 데이비스 핸슨', '300', '40', '김앤김북스', '340-빅1026미', '미국은왜아웃사이더트럼프를선택했는가.jpg', '2020', '2020-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '푸틴 : 권력의 논리', '후베르트 자이펠', '300', '40', '지식갤러리', '340-후1027푸', '푸틴권력의논리.jpg', '2018', '2018-01-01', 13000, 4, 0);
+
+insert into book values
+(bookseq.nextval, '잘못된 단어 : 정치적 올바름은 어떻게 우리를 침묵시키는가', '르네 피스터', '300', '40', '문예', '340-르1028잘', '잘못된단어.jpg', '2024', '2024-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '규제의 역설 : 왜 좋은 의도로 만든 정책이 나쁜 결과를 가져올까?', '최성락', '300', '50', '페이퍼로드', '350-최1029규', '규제의역설.jpg', '2020', '2020-01-01', 13000, 6, 0);
+
+insert into book values
+(bookseq.nextval, '판결 너머 자유 : 분열의 시대, 합의는 가능한가', '김영란', '300', '60', '창비', '360-김1030판', '판결너머자유.jpg', '2024', '2024-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '나는 왜 마약 변호사를 하는가 : 당신이 알지 못하는, 약한 사람들의 이야기', '안준형', '300', '60', '세이코리아', '360-안1031나', '나는왜마약변호사를하는가.jpg', '2023', '2023-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '판사의 언어, 판결의 속살 : 판사란 무엇이며, 판결이란 무엇인가', '손호영', '300', '60', '동아시아', '360-손1032판', '판사의언어판결의속살.jpg', '2024', '2024-01-01', 13000, 17, 0);
+
+insert into book values
+(bookseq.nextval, '아이들은 어떻게 배우는가', '존 홀트', '300', '70', '아침이슬', '370-존1033아', '아이들은어떻게배우는가.jpg', '2007', '2007-01-01', 13000, 0, 0);
+
+insert into book values
+(bookseq.nextval, '대치동 : 학벌주의와 부동산 신화가 만나는 곳', '조장훈', '300', '70', '사계절', '370-조1034대', '대치동.jpg', '2021', '2021-01-01', 13000, 15, 0);
+
+insert into book values
+(bookseq.nextval, '총을 든 아이들, 소년병', '미리엄 데노브', '300', '90', '시대의창', '390-미1035총', '총을든아이들소년병.jpg', '2014', '2014-01-01', 13000, 20, 0);
+
+insert into book values
+(bookseq.nextval, '비커밍 : 미셸 오바마 자서전', '미셸 오바마', '300', '40', '웅진지식하우스', '340-미1036비', '비커밍.jpg', '2018', '2018-01-01', 13000, 30, 0);
+
+--회원
+drop sequence memseq;
+create sequence memseq
+  increment by 1
+  start with 1001
+  minvalue 1000
+  maxvalue 9999
+  nocache;
+
+drop table member;
+create table member(
+    mnum number not null primary key,
+    mname varchar2(15),
+    id varchar2(15),
+    password varchar2(15),
+    email1 varchar2(15),
+    email2 varchar2(15),
+    rrn1 varchar2(10),
+    rrn2 varchar2(10),
+    phone1 varchar2(5),
+    phone2 varchar2(5),
+    phone3 varchar2(5),
+    address1 varchar2(30),
+    address2 varchar2(30),
+    mborrowcount number default 0,
+    mreservecount number default 0
+);
+
+insert into member values (memseq.nextval, '관리자', 'admin', '1234', 'admin','naver.com','000000','0000000','010','0000','0000','서울시','마포구',0,0);
+
+insert into member values (memseq.nextval, '손흥민', 'son', '1234', 'son','naver.com','000000','0000000','010','0000','0000','서울시','서대문구',0,0);
+insert into member values (memseq.nextval, '김연아', 'kim', '1234', 'kim','naver.com','000000','0000000','010','0000','0000','서울시','은평구',0,0);
+insert into member values (memseq.nextval, '장미란', 'jang', '1234', 'jang','naver.com','000000','0000000','010','0000','0000','서울시','용산구',0,0);
+insert into member values (memseq.nextval, '김연경', 'kim2', '1234', 'kim2','naver.com','000000','0000000','010','0000','0000','서울시','종로구',0,0);
+insert into member values (memseq.nextval, '손연재', 'son2', '1234', 'son2','naver.com','000000','0000000','010','0000','0000','서울시','중구',0,0);
+insert into member values (memseq.nextval, '박지성', 'park', '1234', 'park','naver.com','000000','0000000','010','0000','0000','서울시','강서구',0,0);
+insert into member values (memseq.nextval, '박찬호', 'park2', '1234', 'park2','naver.com','000000','0000000','010','0000','0000','서울시','영등포구',0,0);
+insert into member values (memseq.nextval, '김민재', 'kim3', '1234', 'kim3','naver.com','000000','0000000','010','0000','0000','서울시','성북구',0,0);
+insert into member values (memseq.nextval, '황희찬', 'hwang', '1234', 'hwang','naver.com','000000','0000000','010','0000','0000','서울시','강북구',0,0);
+insert into member values (memseq.nextval, '이정후', 'lee', '1234', 'lee','naver.com','000000','0000000','010','0000','0000','서울시','양천구',0,0);
+insert into member values (memseq.nextval, '김하성', 'kim4', '1234', 'kim4','naver.com','000000','0000000','010','0000','0000','서울시','구로구',0,0);
+
+--대출
+drop sequence borrowseq;
+create sequence borrowseq
+  increment by 1
+  start with 101
+  minvalue 100
+  maxvalue 999
+  nocache;
+
+drop table borrow;
+create table borrow(
+    brnum number not null primary key,
+    brmnum number not null,
+    brbnum number,
+    brbcode varchar2(30),
+    borrowdate date default sysdate,
+    returndate date default sysdate + 14,
+    extendcount number default 0
+);
+
+--예약
+drop sequence reserveseq;
+create sequence reserveseq
+  increment by 1
+  start with 101
+  minvalue 100
+  maxvalue 999
+  nocache;
+
+drop table reserve;
+create table reserve(
+    rnum number not null primary key,
+    rmnum number,
+    rbnum number,
+    rbcode varchar2(30),
+    foreign key (rmnum) references member(mnum) on delete cascade
+);
+insert into reserve values (1, 1011, 101, 'aaa');
+
+
+--게시판
+drop sequence articleseq;
+create sequence articleseq
+  increment by 1
+  start with 1
+  minvalue 1
+  maxvalue 10000
+  nocache;
+
+drop table article;
+create table article( 
+	anum number not null primary key,
+	aname varchar2(10) not null,
+	atitle varchar2(100) not null,
+	adate varchar2(30) not null,
+	checkPrivacy varchar2(10),
+	areadcount number default 0,
+	aref number not null,
+	astep number default 0,
+	alevel number default 0,
+	acontent varchar2(4000)
+);
+
